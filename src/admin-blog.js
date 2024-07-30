@@ -81,7 +81,13 @@ const AdminBlog = () => {
     setContent(post.content);
     setEditPostId(post.id);
     setEditMode(true);
-  };
+    
+    // Scroll to the top of the page
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Optional: for smooth scrolling
+    });
+  };  
 
   const handleDelete = async (id) => {
     try {
