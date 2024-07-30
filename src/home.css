@@ -1,0 +1,89 @@
+/* src/components/home.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .main-content {
+    padding-top: 20px; /* Ensure main content is not hidden behind the fixed header */
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Section styling */
+  .section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .section p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Hero section */
+ /* src/components/home.css */
+    .hero {
+    background: url('/public/home-image.png') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    height: 500px;
+    padding: 100px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .hero-text {
+    background-color: rgba(34, 29, 54, 0.5); /* Semi-transparent background for the text box */
+    padding: 20px;
+    margin-top: 30px;
+    margin-left: 40px;
+    border-radius: 8px;
+    max-width: 600px; /* Optional: control the width of the text box */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Optional: add a shadow to the text box */
+    display: flex;
+    flex-direction: column; /* Align text and button vertically */
+    align-items: flex-start; /* Align text to the left inside the box */
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%
+  }
+  
+  .search-input {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+  }
+  

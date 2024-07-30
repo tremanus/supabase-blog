@@ -1,0 +1,65 @@
+/* src/components/header.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .header {
+    background-color: #e8ecf9;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the header stays on top of other content */
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .logo {
+    width: 50px; /* Adjust the size of the logo */
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .site-title {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 10px;
+  }
+  
+  nav ul li {
+    margin: 0 25px;
+    font-size: 1.2rem;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600px;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Add some top padding to the main content to prevent it from being hidden behind the fixed header */
+  body {
+    padding-top: 80px; /* Adjust this value based on the height of your header */
+    margin: 0; /* Ensure no default margin is applied to the body */
+  }
+  

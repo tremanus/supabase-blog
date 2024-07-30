@@ -1,0 +1,59 @@
+/* src/components/blog.css */
+
+.blog-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows the posts to wrap to the next line if there's not enough space */
+    justify-content: center; /* Center-aligns posts horizontally */
+    padding: 20px;
+    margin-top: 80px; /* Adds margin to separate from the heading */
+}
+
+h1 {
+    margin: 20px; /* Ensures there's space around the heading */
+    text-align: center; /* Center-aligns the heading */
+    width: 100%; /* Ensures the heading takes up full width */
+}
+
+.post-preview {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px;
+    width: 300px; /* Adjust width as needed */
+    max-width: 100%; /* Ensures the post doesn’t exceed container width */
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.post-preview:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.post-preview img {
+    width: 100%;
+    height: auto;
+}
+
+.post-preview .post-header {
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.post-preview .post-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.post-preview .post-header p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.post-content {
+    display: none;
+    padding: 10px;
+}
+
+.post-content.active {
+    display: block;
+}

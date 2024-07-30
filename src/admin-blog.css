@@ -1,0 +1,114 @@
+/* admin-blog.css */
+
+.admin-blog-container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    margin-top: 80px;
+  }
+  
+  .admin-blog-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .admin-blog-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .admin-blog-input,
+  .admin-blog-file-input {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  .admin-blog-file-input {
+    padding: 5px; /* Adjust padding for file input */
+  }
+  
+  .admin-blog-editor {
+    margin-bottom: 10px;
+  }
+  
+  .admin-blog-submit-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 50px;
+  }
+  
+  .admin-blog-submit-button:hover {
+    background-color: #45a049;
+  }
+  
+  .admin-blog-posts {
+    margin-top: 20px;
+  }
+  
+  .admin-blog-post {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    max-width: 49%;
+    margin-top: 20px;
+  }
+  
+  .admin-blog-post-image {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .info {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .admin-blog-post-content {
+    margin-top: 10px;
+  }
+  
+  .admin-blog-edit-button {
+    margin-left: 10px;
+  }
+  
+  .admin-blog-buttons-container {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    margin-top: 10px;
+  }
+  
+  .admin-blog-delete-button, .admin-blog-edit-button {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 10px; /* Adjust margin to space buttons evenly */
+  }
+  
+  
+  .admin-blog-delete-button:hover, .admin-blog-edit-button {
+    background-color: #ff3333;
+  }
+  
