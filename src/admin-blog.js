@@ -11,7 +11,7 @@ Quill.register('modules/imageResize', ImageResize);
 const AdminBlog = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  const [coverImage, setCoverImage] = useState(''); // This will be mapped to cover_image in Supabase
+  const [cover_image, setCoverImage] = useState('');
   const [content, setContent] = useState('');
   const [posts, setPosts] = useState([]);
   const [editMode, setEditMode] = useState(false);
@@ -44,7 +44,7 @@ const AdminBlog = () => {
           .update({
             title,
             author,
-            cover_image: coverImage, // Updated field name
+            cover_image,
             content
           })
           .eq('id', editPostId);
@@ -55,7 +55,7 @@ const AdminBlog = () => {
         // Create new post
         const { error } = await supabase
           .from('posts')
-          .insert([{ title, author, cover_image: coverImage, content }]); // Updated field name
+          .insert([{ title, author, cover_image, content }]);
         if (error) throw error;
       }
       // Clear form fields
@@ -77,7 +77,7 @@ const AdminBlog = () => {
   const handleEdit = (post) => {
     setTitle(post.title);
     setAuthor(post.author);
-    setCoverImage(post.cover_image); // Updated field name
+    setCoverImage(post.cover_image);
     setContent(post.content);
     setEditPostId(post.id);
     setEditMode(true);
@@ -134,7 +134,7 @@ const AdminBlog = () => {
             <input
               type="text"
               className="admin-blog-input"
-              value={coverImage}
+              value={cover_image}
               onChange={(e) => setCoverImage(e.target.value)}
             />
           </div>
