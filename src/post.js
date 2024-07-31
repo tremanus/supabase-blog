@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import supabase from './supabaseClient'; // Import Supabase client
 import Header from './header';
 import './post.css';
+import 'react-quill/dist/quill.snow.css';
 
 const PostDetail = () => {
   const { slug } = useParams();
@@ -39,12 +40,9 @@ const PostDetail = () => {
       ) : post ? (
         <div className="post-fullscreen">
           <h1>{post.title}</h1>
-          <p>By: {post.author}</p>
+          <p className="author">By: {post.author}</p>
           {post.cover_image && <img src={post.cover_image} alt={post.title} className="post-fullscreen-image" />}
-          <div
-            className="post-content"
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
+          <div dangerouslySetInnerHTML={{ __html: post.content }} className="admin-blog-post-content" />
         </div>
       ) : (
         <p>Post not found.</p>

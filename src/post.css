@@ -24,9 +24,14 @@
     text-align: center;
 }
 
-.post-fullscreen p {
+.author {
     text-align: center;
     font-style: italic;
+    color: #555;
+    margin: 10px 0;
+}
+
+.post-fullscreen p {
     color: #555;
     margin: 10px 0;
 }
