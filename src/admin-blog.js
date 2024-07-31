@@ -173,7 +173,7 @@ const AdminBlog = () => {
           </button>
         </form>
         <div className="admin-blog-posts">
-          <h2>Existing Posts</h2>
+          <h2 className="edit-title">Existing Posts</h2>
           <ul>
             {posts.map(post => (
               <li key={post.id} className="admin-blog-post">
@@ -182,7 +182,6 @@ const AdminBlog = () => {
                   <p>{post.author}</p>
                 </div>
                 {post.cover_image && <img src={post.cover_image} alt={post.title} className="admin-blog-post-image" />}
-                <div dangerouslySetInnerHTML={{ __html: post.content }} className="admin-blog-post-content" />
                 <div className="admin-blog-buttons-container">
                   <button onClick={() => handleEdit(post)} className="admin-blog-edit-button">
                     Edit

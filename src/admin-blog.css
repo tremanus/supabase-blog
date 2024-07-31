@@ -63,6 +63,7 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 10px;
+    margin-right: 10px;
     margin-bottom: 10px;
     background-color: #fff;
     max-width: 49%;
@@ -112,3 +113,6 @@
     background-color: #ff3333;
   }
   
+  .edit-title {
+    text-align: center;
+  }
