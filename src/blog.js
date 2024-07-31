@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import supabase from './supabaseClient'; // Import Supabase client
 import Header from './header';
 import './blog.css';
 
 const Blog = () => {
   const [posts, setPosts] = useState([]);
-  const [activePostId, setActivePostId] = useState(null);
 
   useEffect(() => {
     // Fetch posts from Supabase
@@ -24,11 +24,6 @@ const Blog = () => {
     fetchPosts();
   }, []);
 
-  const handlePostClick = (id) => {
-    // Toggle the content visibility for the clicked post
-    setActivePostId(activePostId === id ? null : id);
-  };
-
   return (
     <div className="blog-container">
       <Header />
@@ -36,20 +31,14 @@ const Blog = () => {
       <ul>
         {posts.length ? (
           posts.map(post => (
-            <li
-              className="post-preview"
-              key={post.id} // Updated to match Supabase column name
-              onClick={() => handlePostClick(post.id)} // Updated to match Supabase column name
-            >
-              <div className="post-header">
-                <h3>{post.title}</h3>
-                <p>By: {post.author}</p>
-              </div>
-              {post.cover_image && <img src={post.cover_image} alt={post.title} />} {/* Updated to cover_image */}
-              <div
-                className={`post-content ${activePostId === post.id ? 'active' : ''}`} // Updated to match Supabase column name
-                dangerouslySetInnerHTML={{ __html: post.content }}
-              />
+            <li className="post-preview" key={post.id}>
+              <Link to={`/blog/${post.slug}`}>
+                <div className="post-header">
+                  <h3>{post.title}</h3>
+                  <p>{post.author}</p>
+                </div>
+                {post.cover_image && <img src={post.cover_image} alt={post.title} className="post-preview-image" />}
+              </Link>
             </li>
           ))
         ) : (

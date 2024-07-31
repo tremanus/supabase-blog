@@ -43,7 +43,7 @@ body {
     background: url('/public/home-image.png') no-repeat center center/cover;
     color: #fff;
     text-align: center;
-    height: 500px;
+    height: 600px;
     padding: 100px 20px;
     margin-bottom: 20px;
     border-radius: 8px;
@@ -53,8 +53,8 @@ body {
   .hero-text {
     background-color: rgba(34, 29, 54, 0.5); /* Semi-transparent background for the text box */
     padding: 20px;
-    margin-top: 30px;
-    margin-left: 40px;
+    margin-top: 50px;
+    margin-left: 50px;
     border-radius: 8px;
     max-width: 600px; /* Optional: control the width of the text box */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Optional: add a shadow to the text box */

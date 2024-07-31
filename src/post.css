@@ -1,0 +1,57 @@
+/* src/components/post.css */
+
+.post-detail-container {
+    padding: 20px;
+    margin-top: 80px; /* Space below the header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-fullscreen {
+    background: #fff;
+    padding: 20px;
+    width: 90%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.post-fullscreen h1 {
+    margin-top: 20px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.post-fullscreen p {
+    text-align: center;
+    font-style: italic;
+    color: #555;
+    margin: 10px 0;
+}
+
+.post-fullscreen-image {
+    width: 60%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    margin: 20px auto;
+}
+
+.post-content {
+    padding: 10px;
+    overflow-y: auto; /* Allows scrolling if content overflows */
+}
+
+.post-content img {
+    max-width: 100%; /* Ensures images do not overflow the content area */
+    height: auto;
+    display: block; /* Ensures images display correctly */
+    margin: 10px 0; /* Adds margin around images */
+}
+
+.post-content p {
+    margin: 10px 0; /* Adds margin around paragraphs */
+    line-height: 1.6; /* Improves readability */
+}

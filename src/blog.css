@@ -1,5 +1,3 @@
-/* src/components/blog.css */
-
 .blog-container {
     display: flex;
     flex-wrap: wrap; /* Allows the posts to wrap to the next line if there's not enough space */
@@ -23,6 +21,7 @@ h1 {
     max-width: 100%; /* Ensures the post doesn’t exceed container width */
     cursor: pointer;
     transition: box-shadow 0.3s ease;
+    text-align: center; /* Center-aligns text within the post preview */
 }
 
 .post-preview:hover {
@@ -47,6 +46,16 @@ h1 {
 .post-preview .post-header p {
     margin: 5px 0;
     color: #555;
+    font-style: italic; /* Optional: Make the author text italic */
+}
+
+.post-preview a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Ensure the link inherits color from parent */
+}
+
+.post-preview a:hover {
+    color: rgb(56, 2, 2); /* Optional: Change color on hover */
 }
 
 .post-content {

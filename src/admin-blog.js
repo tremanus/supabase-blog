@@ -5,6 +5,7 @@ import 'react-quill/dist/quill.snow.css';
 import Header from './header'; // Adjust import path as needed
 import './admin-blog.css';
 import ImageResize from 'quill-image-resize-module-react';
+import slugify from 'slugify';
 
 Quill.register('modules/imageResize', ImageResize);
 
@@ -37,6 +38,8 @@ const AdminBlog = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      const slug = slugify(title, { lower: true, strict: true });
+  
       if (editMode) {
         // Update existing post
         const { error } = await supabase
@@ -45,7 +48,8 @@ const AdminBlog = () => {
             title,
             author,
             cover_image,
-            content
+            content,
+            slug
           })
           .eq('id', editPostId);
         if (error) throw error;
@@ -55,7 +59,7 @@ const AdminBlog = () => {
         // Create new post
         const { error } = await supabase
           .from('posts')
-          .insert([{ title, author, cover_image, content }]);
+          .insert([{ title, author, cover_image, content, slug }]);
         if (error) throw error;
       }
       // Clear form fields
@@ -72,7 +76,7 @@ const AdminBlog = () => {
     } catch (error) {
       console.error('Error saving post:', error.message);
     }
-  };
+  };  
 
   const handleEdit = (post) => {
     setTitle(post.title);
