@@ -1,9 +1,12 @@
+/* src/components/blog.css */
+
 .blog-container {
     display: flex;
-    flex-wrap: wrap; /* Allows the posts to wrap to the next line if there's not enough space */
-    justify-content: center; /* Center-aligns posts horizontally */
+    flex-direction: column; /* Align children vertically */
+    align-items: center; /* Center-align children horizontally */
     padding: 20px;
     margin-top: 80px; /* Adds margin to separate from the heading */
+    background-color: rgb(246, 238, 251);
 }
 
 h1 {
@@ -12,16 +15,27 @@ h1 {
     width: 100%; /* Ensures the heading takes up full width */
 }
 
+ul {
+    display: flex;
+    flex-wrap: wrap; /* Allows the posts to wrap to the next line if there's not enough space */
+    justify-content: center; /* Center-aligns posts horizontally */
+    padding: 0;
+    list-style: none; /* Removes default list styling */
+    margin: 0; /* Removes default margin */
+}
+
 .post-preview {
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    margin: 10px;
+    margin: 20px 40px;
+    margin-bottom: 0;
     width: 300px; /* Adjust width as needed */
     max-width: 100%; /* Ensures the post doesn’t exceed container width */
     cursor: pointer;
     transition: box-shadow 0.3s ease;
     text-align: center; /* Center-aligns text within the post preview */
+    background-color: #fff; /* Adds background color for contrast */
 }
 
 .post-preview:hover {
